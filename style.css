@@ -293,65 +293,34 @@ footer span {
     color: var(--accent);
 }
 
+
 /* Projects */
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 22px;
-    margin-top: 35px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+    margin-top: 40px;
     text-align: left;
 }
 
-.project-card {
-    background: var(--card);
-    padding: 28px;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    transition: 0.3s;
+/* Tablet */
+@media (max-width: 900px) {
+    .project-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
 }
 
-.project-card:hover {
-    transform: translateY(-7px);
-    border-color: var(--accent);
+/* Mobile */
+@media (max-width: 600px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
 }
 
-.project-number {
-    color: var(--accent);
-    font-size: 14px;
-    font-weight: 800;
-    margin-bottom: 15px;
-}
 
-.project-card h3 {
-    margin-bottom: 12px;
-}
-
-.project-card p {
-    color: var(--muted);
-    font-size: 14px;
-    min-height: 85px;
-}
-
-.project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin: 20px 0;
-}
-
-.project-tags span {
-    font-size: 11px;
-    padding: 5px 10px;
-    border-radius: 20px;
-    color: var(--accent);
-    background: rgba(56, 189, 248, 0.1);
-}
-
-.project-link {
-    color: var(--accent);
-    font-weight: 700;
-}
 
 /* Contact */
 
@@ -517,5 +486,42 @@ footer {
         scroll-behavior: auto !important;
         transition-duration: 0.01ms !important;
         animation-duration: 0.01ms !important;
+    }
+}
+
+/* Project Grid Desktop */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+/* Project Grid Responsive */
+
+@media (max-width: 900px) {
+    .project-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Project Grid Responsive */
+
+@media (max-width: 900px) {
+    .project-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .project-grid {
+        grid-template-columns: 1fr;
     }
 }
